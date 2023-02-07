@@ -14,14 +14,14 @@ for i in range (ordre):
                 ligne.append('b')
         elif i > j and position == 'Bas':
             if couleur == 'Rouge':
-                ligne.append(r)
+                ligne.append('r')
             else :
-                ligne.append(b)
+                ligne.append('b')
         else:
             ligne.append('*')
     matrice.append(ligne)
 
 for ligne in matrice :
     for i in range (ordre):
-        print (ligne[i], end='  ')
+        print (ligne[i], end=('  '))
     print('\n')
