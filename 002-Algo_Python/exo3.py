@@ -1,6 +1,6 @@
-phrase = " Neymar da Silva    S'   antos        Júnior, dit Ney'mar Jr. ,est un footballeur international brésilien qui évolue au poste d' attaquant au Paris Saint-Germain ."
-# while phrase == "":
-#     input ("Entrer vos phrases:\n") 
+phrase = str(input("Entrez vos phrases"))
+while phrase == "":
+    input ("Entrer vos phrases:\n") 
 
 def espaces_inutiles(x):
     o=""
