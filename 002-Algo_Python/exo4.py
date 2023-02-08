@@ -1,13 +1,13 @@
 numero = 'ncghcgxbnjoikbvxfb77182610578654327kjbftcvghb8897542467hgjhxyfc776487690fhufdt34586563798'
 
-# def espaces(a):
-#     t=''
-#     for i in range(len(a)):
-#         if not (a[i] ==" "):
-#             t=t+a[i]
-#     return t 
-# num1= espaces(numero)
-# print(num1)
+def espaces(a):
+    t=''
+    for i in range(len(a)):
+        if not (a[i] ==" "):
+            t=t+a[i]
+    return t 
+num1= espaces(numero)
+print(num1)
 def recuperation(a):
     s = []
     p=0
@@ -18,7 +18,7 @@ def recuperation(a):
                 s.append(x)
                 p = i+1
     return s
-num2 = recuperation(numero)
+num2 = recuperation(num1)
 print (num2)
 
 def num_valide(a):
