@@ -5,14 +5,17 @@ if choisir == 1 :
     saisie(tab)
 elif choisir == 2 :
     print('\n')
-    print ('La liste des étudiants :\n' , affichage(tab))
+    print ('La liste des étudiants :\n' )
+    affichage(tab)
 elif choisir == 3 : print('Voici le tri par ordre décroissant de la moyenne :\n')
 elif choisir == 4 : 
     choix = input('Donner un critère de recherche d"un étudiant: ')
     print('\n')
     recherche(choix,tab)
 elif choisir == 4 : print('Donner un critère de recherche d"un étudiant : ')
-elif choisir == 5 : print('Vous souhaitez modifier les informations de quel étudiant ? Veuiller donner son numero : ')
+elif choisir == 5 : 
+    choix = input('Vous souhaitez modifier les informations de quel étudiant ? Veuiller donner son numero : ')
+    modification(choix,tab)
 elif choisir == 6 : exit
 while choisir != 6:
     print('\n')
@@ -28,6 +31,7 @@ while choisir != 6:
         choix = input('Donner un critère de recherche d"un étudiant : ')
         print('\n')
         recherche(choix,tab)
-    elif choisir == 4 : print('Donner un critère de recherche d"un étudiant: ')
-    elif choisir == 5 : print('Vous souhaitez modifier les informations de quel étudiant ? : Veuiller donner son numero : ')
+    elif choisir == 5 : 
+        choix = input('Vous souhaitez modifier les informations de quel étudiant ? Veuiller donner son numero : ')
+        modification(choix,tab)
 if choisir == 6 : exit

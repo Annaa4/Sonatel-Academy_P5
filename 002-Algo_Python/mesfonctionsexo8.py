@@ -62,4 +62,25 @@ def recherche(a,tab):
             for j in range (len(i)):
                 print("|",i[j], end =(15-len(str(i[j])))*" ")
 def modification(a,tab):
-    for i in tab:
+     for i in tab: 
+        if i[2] == a:
+            dev = float(input('Devoir : '))
+            while dev > 20 or dev <0:
+                dev = float(input('Devoir : '))
+            proj= float(input('Projet : '))
+            while proj > 20 or proj <0:
+                    proj = float(input('Projet : '))
+            exam = float(input('Examen : '))
+            while exam > 20 or exam <0:
+                    exam = float(input('Devoir : '))
+            moyenne = calcul_moyenne(dev,proj,exam)
+            i[4]=dev
+            i[5]=proj
+            i[6]=exam
+            i[7]=moyenne
+            for j in range (len(i)):
+                print("|",i[j], end =(15-len(str(i[j])))*" ")
+
+def tri(a):
+        
+
