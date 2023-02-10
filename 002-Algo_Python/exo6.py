@@ -43,5 +43,5 @@ for i in range (ordre):
 
 for ligne in matrice :
     for i in range (ordre):
-        print (ligne[i], end='  ')
+        print (ligne[i], end='\t')
     print('\n')
