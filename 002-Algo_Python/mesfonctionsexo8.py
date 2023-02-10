@@ -22,8 +22,8 @@ def saisie(a):
     a.append([prenom,nom,telephone,classe,dev,proj,exam,moyenne]) 
     choix = str(input('Voulez-vous continuez ? : oui/non\n'))
     while choix =="oui": 
-        return saisie(a) 
-        
+        return saisie(a)  
+
 def verification_number(a):
     c = ['0','1','2','3','4','5','6','7','8','9']
     second_indice=['0','7','8','6','5']
@@ -61,6 +61,7 @@ def recherche(a,tab):
         if a in i: 
             for j in range (len(i)):
                 print("|",i[j], end =(15-len(str(i[j])))*" ")
+
 def modification(a,tab):
      for i in tab: 
         if i[2] == a:
@@ -89,4 +90,8 @@ def tri(a):
             t = b[7]
             l=k[7]
             c = []
-            if l > t :
+            while  u >= 1 and l>t:
+                a[u + 1] = a[u]
+                u = u - 1
+            a[u+1]= k
+        affichage(a)
