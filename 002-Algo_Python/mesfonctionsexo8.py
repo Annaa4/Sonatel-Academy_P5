@@ -82,5 +82,11 @@ def modification(a,tab):
                 print("|",i[j], end =(15-len(str(i[j])))*" ")
 
 def tri(a):
-        
-
+        for i in range(2,len(a)) :
+            k = a[i]
+            u=i-1
+            b=a[u]
+            t = b[7]
+            l=k[7]
+            c = []
+            if l > t :
