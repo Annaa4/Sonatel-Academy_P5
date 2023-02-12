@@ -1,4 +1,3 @@
-# choisir = int (input("        MENU\n 1. Ajouter un autre étudiant\n 2. Trier et afficher \n 3. Rechercher\n 4. Modification de notes\n 5. Quitter\n Veuillez faire votre choix :\n"))
 def saisie(a):
     prenom = str(input('Prenom: '))
     nom = str(input('Nom: '))
