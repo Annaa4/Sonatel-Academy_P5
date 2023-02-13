@@ -22,7 +22,6 @@ for i in range(1,len(r)):
     if a[len(a)-1]==b[0]:
         t.append('0')
     t.append(r[i])
-
-
+    
 for i in t:
     print(i,end="")
