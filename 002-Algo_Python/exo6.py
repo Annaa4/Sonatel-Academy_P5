@@ -1,6 +1,6 @@
-ordre = int (input("Donner l'ordre de votre matrice : "))
-while ordre < 4 and ordre not in [5,6,7,8,9]:
-    ordre = int(input("L'ordre de la matrice doit être supérieure à 4; Veuillez réessayer : h"))
+ordre = str (input("Donner l'ordre de votre matrice : "))
+while ordre not in ['5','6','7','8','9'] or (int(ordre)) <4:
+    ordre = str(input("L'ordre de la matrice doit être supérieure à 4; Veuillez réessayer : "))
 couleur = str (input("choisissez une couleur entre Rouge et Bleu : ")) 
 position = str (input("Choisissez une position : ADDP, EDDP, SDP,ADDS,EDDS,SDS : "))
 matrice = []
