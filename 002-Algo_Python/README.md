@@ -11,4 +11,4 @@ __Écrire un programme qui propose à l’utilisateur le menu de choix suivant :
     ● Les mois sont stockés dans un tableau   
 Janvier Avril Juillet   Octobre  
 Février Mai   Août      Novembre  
-Mars    Juin  Septembre Décembre  
+Mars    Juin  Septembre Décembre   
