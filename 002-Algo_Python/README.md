@@ -12,3 +12,4 @@ __Écrire un programme qui propose à l’utilisateur le menu de choix suivant :
 Janvier Avril Juillet   Octobre  
 Février Mai   Août      Novembre  
 Mars    Juin  Septembre Décembre   
+## Exercice 2
