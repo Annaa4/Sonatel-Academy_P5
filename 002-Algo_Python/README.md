@@ -11,9 +11,12 @@ Règles de Gestion
 JanvierAvrilJuilletOctobre
 FévrierMaiAoûtNovembre
 MarsJuinSeptembreDécembre
+
+
 Exercice 2
 Écrire un programme qui permet de saisir une phrase. Le programme enlève tous les espaces
 inutiles de la phrase.
+
 Exercice 3
 Écrire un programme qui permet de saisir une chaîne de N phrases. Le programme enlève
 tous les espaces inutiles de chaque phrase puis réaffiche les phrases corrigées.
@@ -22,6 +25,7 @@ Règles de Gestion
 ● Les phrases ne doivent pas contenir des caractères spéciaux
 ● Une phrase commence par une lettre majuscule et se termine par un point (. ou ?ou !)
 ● Chaque phrase contiendra au moins 25 caractères
+
 Exercice 4
 Écrire un programme qui permet de remplir N numéros à partir d’une chaîne. Le programme
 réaffiche les numéros valides à gauche et les numéros invalides à droite de l’écran. Le
@@ -32,7 +36,9 @@ Règles de Gestion
 ● Un numéro est valide :
 ○ S’il commence par 77,78,76,70 ou 75
 ○ S’il contient que 9 chiffres
-○ Un numéro peut contenir des espacesExercice 5
+○ Un numéro peut contenir des espaces
+
+Exercice 5
 Proposer un programme qui permet la saisie :
 ● De l’ordre d’une matrice carrée
 ● Un Menu de choix avec comme options Bleu et Rouge
@@ -45,6 +51,7 @@ Règles de Gestion
 ● Bas correspond aux éléments se situant en dessous de la diagonale principale
 ● Tous les choix sont obligatoires
 ● L’ordre de la matrice est un entier et est supérieur à 5
+
 Exercice 6
 Proposer un programme qui permet la saisie :
 ● De l’ordre d’une matrice carrée
@@ -72,7 +79,9 @@ Règles de Gestion
 ● A chaque choix d’une position on devra l’associer a une couleur.
 ● Toutes les valeurs sont Obligatoires
 ● Le champ de saisi de l’ordre de la matrice est un entier et est supérieur à 4
-● Une couleur est choisie une et une seule foisExercice 7 :
+● Une couleur est choisie une et une seule fois
+
+Exercice 7 :
 Écrire un programme qui, à partir d’une phrase, affiche son équivalent codé.
 Règles de codage de la phrase :
 On considère le clavier avec les anciens téléphones avec touches.
@@ -90,7 +99,9 @@ devient la lettre J.
 chiffre ZÉRO (0)
 - Exemples :
 - Bonjour aly ⇔ 22666066566688777002555999
-- J’ai 17,5 en algo ⇔ 5’244400bh,f0033660025554666Exercice 8
+- J’ai 17,5 en algo ⇔ 5’244400bh,f0033660025554666
+
+Exercice 8
 Demander des informations concernant l’étudiant tant que l’utilisateur désire continuer.
 Vous devez demander le téléphone, nom, prénom, classe, note de devoir, note de projet et
 note d’examen pour ensuite calculer la moyenne et afficher le résultat sous forme du tableau
