@@ -13,3 +13,4 @@ Janvier Avril Juillet   Octobre
 Février Mai   Août      Novembre  
 Mars    Juin  Septembre Décembre   
 ## Exercice 2
+
