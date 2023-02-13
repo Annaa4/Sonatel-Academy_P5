@@ -13,20 +13,16 @@ Janvier Avril Juillet   Octobre
 Février Mai   Août      Novembre  
 Mars    Juin  Septembre Décembre   
 ### [Exercice 2](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo2.py)  
-Écrire un programme qui permet de saisir une phrase. Le programme enlève tous les espaces
-inutiles de la phrase.
+__Écrire un programme qui permet de saisir une phrase.__ __Le programme enlève tous les espaces inutiles de la phrase.__
 ### [Exercice 3](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo3.py)
-Écrire un programme qui permet de saisir une chaîne de N phrases. Le programme enlève
-tous les espaces inutiles de chaque phrase puis réaffiche les phrases corrigées.  
+__Écrire un programme qui permet de saisir une chaîne de N phrases.__ __Le programme enlève tous les espaces inutiles de chaque phrase puis réaffiche les phrases corrigées.__
 Règles de Gestion  
 ● La chaîne de saisie est Obligatoire  
 ● Les phrases ne doivent pas contenir des caractères spéciaux  
 ● Une phrase commence par une lettre majuscule et se termine par un point (. ou ?ou !)  
 ● Chaque phrase contiendra au moins 25 caractères  
 ### [Exercice 4](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo4.py)
-Écrire un programme qui permet de remplir N numéros à partir d’une chaîne. Le programme
-réaffiche les numéros valides à gauche et les numéros invalides à droite de l’écran. Le
-programme affichera aussi le nombre de numéros de chaque opérateur.  
+__Écrire un programme qui permet de remplir N numéros à partir d’une chaîne.__ __Le programme réaffiche les numéros valides à gauche et les numéros invalides à droite de l’écran.__ __Le programme affichera aussi le nombre de numéros de chaque opérateur.__  
 Règles de Gestion  
 ● La chaîne de saisie des numéros est obligatoire  
 ● Les numéros doivent être valides.  
@@ -35,7 +31,7 @@ Règles de Gestion
 ○ S’il contient que 9 chiffres  
 ○ Un numéro peut contenir des espaces 
 ### [Exercice 5](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo5.py)
-Proposer un programme qui permet la saisie :  
+__Proposer un programme qui permet la saisie :__  
 ● De l’ordre d’une matrice carrée  
 ● Un Menu de choix avec comme options Bleu et Rouge  
 ● Un Menu de choix pour la position de la couleur Bleu avec comme valeur HAUT ou
@@ -48,7 +44,7 @@ Règles de Gestion
 ● Tous les choix sont obligatoires  
 ● L’ordre de la matrice est un entier et est supérieur à 5
 ### [Exercice 6](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo6.py)
-Proposer un programme qui permet la saisie :  
+__Proposer un programme qui permet la saisie :__  
 ● De l’ordre d’une matrice carrée  
 ● Un Menu de choix pour la position de la couleur  
 ○ ADDP, au-dessus de la diagonale principale.  
@@ -76,7 +72,7 @@ Règles de Gestion
 ● Le champ de saisi de l’ordre de la matrice est un entier et est supérieur à 4  
 ● Une couleur est choisie une et une seule fois
 ### [Exercice 7](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo7.py) 
-Écrire un programme qui, à partir d’une phrase, affiche son équivalent codé.
+__Écrire un programme qui, à partir d’une phrase, affiche son équivalent codé.__
 Règles de codage de la phrase :
 On considère le clavier avec les anciens téléphones avec touches.
 
@@ -96,7 +92,7 @@ chiffre ZÉRO (0)
 - Bonjour aly ⇔ 22666066566688777002555999
 - J’ai 17,5 en algo ⇔ 5’244400bh,f0033660025554666
 ### [Exercice 8](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo8.py)
-Demander des informations concernant l’étudiant tant que l’utilisateur désire continuer.  
+__Demander des informations concernant l’étudiant tant que l’utilisateur désire continuer.__  
 Vous devez demander le téléphone, nom, prénom, classe, note de devoir, note de projet et
 note d’examen pour ensuite calculer la moyenne et afficher le résultat sous forme du tableau
 ci- dessous lorsque l’utilisateur terminera sa saisie.  
@@ -117,7 +113,7 @@ numéro de téléphone.
 ● Tous les affichages doivent se faire sous forme de tableau  
 ● Tous les contrôles de saisie doivent être faits par vos propres fonctions.  
 ### [Exercice 9](https://github.com/Annaa4/Sonatel-Academy_P5/blob/main/002-Algo_Python/exo9.py)
-Écrire un programme qui permet la saisie  
+__Écrire un programme qui permet la saisie__ 
 1. Saisir une suite d’ opérateurs téléphoniques  
 (Orange,Tigo,expresso,...) puis génère une matrice dont le nombre de
 lignes est égal au nombre d’opérateurs saisis.  
