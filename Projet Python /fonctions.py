@@ -6,8 +6,6 @@ def numero(a):
         if not (c[1].isdigit() or c[1].isupper()):
             return False
     return True
-# b=numero('1ZZSERD')
-# print(b)
        
 # Verification du nom
 def nom(a):
@@ -15,15 +13,14 @@ def nom(a):
      return False
     else:
      return True
-# b=nom('AZERTY')
-# print(b)
 
-# #Verification du prenom
+#Verification du prenom
 def prenom(a):
     if len(a) < 2 or not a[0].isalpha():
      return False
     else:
      return True
+#Verification de la date de naissance
 def date_de_naissance_valide(a):
     from datetime import datetime 
     date=''
@@ -53,6 +50,19 @@ def classe(a):
 
 # Verification de la note 
 def note(a):
-    s=a.split(" ")
-    print(s)
+    a = a.split('#')
+    # print(a)
+    for matiere in a :
+        matiere=matiere.replace('[',':').replace(';',':').replace(',','.').replace(']',':')
+        matiere=matiere.split(":")
+        del matiere[len(matiere)-1]
+        s=0
+        nbr=0
+        moy=1
+        for j in range (1,len(matiere)-1):
+            s+=float(matiere[j])
+            nbr+=1
+        moy=((s/nbr)+2*float(matiere[-1]))/3
+        print (matiere)
+        print(moy)
 

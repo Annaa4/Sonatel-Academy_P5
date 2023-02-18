@@ -3,8 +3,9 @@ import fonctions
 with open('/home/anna/Téléchargements/Donnees_Projet_Python_DataC5.csv') as csvfile:
     csvreader = csv.reader(csvfile)
     data = [i for i in csvreader]
-for i in range(len(data)-1):
-    print (fonctions.numero(data[1]))
+    print(data)
+# for i in range(len(data)-1):
+#     print (fonctions.note(data[0][6]))
 
 
 
