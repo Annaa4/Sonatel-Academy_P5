@@ -1,9 +1,8 @@
 t = 'Math[10;11:15] #Francais[7;12;8:13] #Anglais[13,5;9:15] #PC[11:9]  #SVT[12;9;16;11:12]  #HG[10:13]'
 # Verification de la note
 def note(a):
-    a = a.split('#')
     # print(a)
-    for matiere in a :
+    for matiere in a.split('#') :
         matiere=matiere.replace('[',':').replace(';',':').replace(',','.').replace(']',':')
         matiere=matiere.split(":")
         del matiere[len(matiere)-1]
@@ -13,7 +12,7 @@ def note(a):
         for j in range (1,len(matiere)-1):
             s+=float(matiere[j])
             nbr+=1
-        moy=((s/nbr)+2*float(matiere[-1]))/3
+        moy=round(((s/nbr)+2*float(matiere[-1]))/3,2)
         print (matiere)
         print(moy)
 note(t)

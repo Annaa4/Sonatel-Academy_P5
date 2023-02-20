@@ -50,9 +50,8 @@ def classe(a):
 
 # Verification de la note 
 def note(a):
-    a = a.split('#')
     # print(a)
-    for matiere in a :
+    for matiere in a.split('#') :
         matiere=matiere.replace('[',':').replace(';',':').replace(',','.').replace(']',':')
         matiere=matiere.split(":")
         del matiere[len(matiere)-1]
@@ -60,9 +59,10 @@ def note(a):
         nbr=0
         moy=1
         for j in range (1,len(matiere)-1):
-            s+=float(matiere[j])
-            nbr+=1
-        moy=((s/nbr)+2*float(matiere[-1]))/3
+            if matiere[j].isdigit():
+                s+=float(matiere[j])
+                nbr+=1
+            moy=round(((s/nbr)+2*float(matiere[-1]))/3,2)
         print (matiere)
         print(moy)
 
