@@ -3,10 +3,18 @@ import fonctions
 with open('/home/anna/Téléchargements/Donnees_Projet_Python_DataC5.csv') as csvfile:
     csvreader = csv.reader(csvfile)
     data = [i for i in csvreader]
+    
+    for dt in data:
+        print(fonctions.note(dt))
+        # # for u in dt:
+        # print("===========================================================")
+        # # print(dt)
+        # print("===========================================================\n\n")
+    exit()
     #Verification du numero:
     num = fonctions.numero(data)
     Tab1=[]
-    for i in data[0][6]:h
+    for i in data[0][6]:
         for j in i:
             print (i[j])
         # for j in i :
