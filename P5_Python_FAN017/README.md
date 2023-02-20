@@ -24,7 +24,7 @@ Vous devez choisir un format de date et transformer toutes les dates sous ce for
 Vous devez choisir un format de classe et transformer toutes les classes sous ce format  
  Note  
 Voici ce que contient la chaine note  
-- Les différentes matières sont séparer par dièse #  
+- Les différentes matières sont séparées par dièse #  
 - Les notes des matières sont dans des crochets []  
 - Les notes de devoir sont séparées par la note d'examen par deux point :  
 - Les notes de devoir sont séparées entre eux par une barre verticale |    
