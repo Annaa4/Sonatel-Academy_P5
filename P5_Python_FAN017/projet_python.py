@@ -1,6 +1,6 @@
 import csv
 import fonctions
-with open('/home/anna/Téléchargements/Donnees_Projet_Python_DataC5.csv') as csvfile:
+with open('./Donnees_Projet_Python_DataC5.csv') as csvfile:
     csvreader = csv.reader(csvfile)
     data = [i for i in csvreader]
     
