@@ -40,53 +40,6 @@ def validdate(date):
         return True
     except:
         return False
-# def validation_date(a):
-
-
-#         a=a.strip()
-#         for i in a: 
-#             if not i.isalnum():
-#                 a=a.replace(i,'/')          
-#         b=a.split('/')
-#         print("rrrrr",b)
-#         #CORRESPONDANCE DES MOIS EN CHIFFRE
-#         month={"jan":'1',"fev":'2',"mars":'3',"avr":'4',"mai":'5',"juin":'6',"juillet":'7',"Dec":'12'}
-#         for mois in month.keys():
-#             if b[1].lower().startswith(mois):
-#                 b[1]=month[mois]
-#                 break
-
-#         for i in b[0] :
-#             if not i.isnumeric():
-#                 return False
-#         for i in b[1] :
-#             if not i.isnumeric():
-#                 return False
-#         for i in b[2] :
-#             if not i.isnumeric() :
-#                 return False
-#         j=b[0]
-#         m=b[1]
-#         an=b[2]
-        
-        
-#         j=int(j)
-#         m=int(m)
-#         an=int(an)
-#         if 00<=an<=23:
-#             an=an+2000
-#         elif 25<=an<=99:
-#             an =an +1900
-
-        
-#         try:
-#             d=datetime.datetime(an,m,j)
-            
-#             # e=d.strftime("%d/%m/%y")
-#             # print(e)            
-#             return True
-#         except:
-#             return False
 
 # Verification de la classe
 def definirFormatClasse(classe):
@@ -134,5 +87,70 @@ def note(a):
         if (moy) > 0 and (moy) <=20:
             matiere.append(moy)
             tab.append(matiere)
-    return tab       
+    return tab     
+
+#Affichage d'une information selon le numero
+def affichage_d_une_information(a,tab):
+    bool=False
+    for i in tab:
+        if a in i:
+            bool=True 
+            for j in range (len(i)):
+                print("|",i[j], end =(15-len(str(i[j])))*" ")
+    if bool==False:
+        print("L'étudiant n'est pas sur la liste")
+    
+#Ajout d'une nouvelle information selon les critères de validité
+def ajout_nouvelle_information(a):
+    #Ajout du numero
+    nume=str(input("Numero : "))
+    nu=numero(nume)
+    while nu == False:
+        print('Veuillez entrer un bon numero')
+        nume=input('Numero')
+        nu=numero(nume)
+    #Ajout du nom
+    name=str(input("Nom : "))
+    n=nom(name)
+    while n == False:
+        print('Veuillez entrer un bon nom')
+        name=str(input("Nom : "))
+        n=nom(name)
+    #Ajout du prenom
+    pren=str(input("Prenom : "))
+    p=prenom(pren)
+    while p == False:
+        print('Veuillez entrer un bon prenom')
+        pren=str(input("Prenom : "))
+        p=prenom(pren)
+    #Ajout de la date de naissance
+    d=str(input("Date de naissance"))
+    da=validdate(d)
+    while da == False:
+        print('Veuillez entrer une bonne date de naissance')
+        d=str(input("Date de naissance : "))
+        da=validdate(d)
+    #Ajout de la classe
+    c=str(input("Entrer une classe"))
+    c1=definirFormatClasse(c)
+    if c1 == False:
+        pass
+    c2 =classeValide(c1)
+    while c2 == False:
+        print("Veuiller entrer une bonne classe")
+        c=str(input("Entrer une classe : "))
+        n1=definirFormatClasse(c)
+        if c1 == False:
+            pass
+        c2 =classeValide(n1)
+    #Ajout des notes
+    no=str(input("Entrer les notes"))
+    nt=note(no)
+    while nt == False:
+        print("Veuiller entrer de bonnes notes")
+        no=str(input("Entrer les notes : "))
+        nt=note(no)
+    a.append(nume,name,pren,d,c,no)
+
+
 

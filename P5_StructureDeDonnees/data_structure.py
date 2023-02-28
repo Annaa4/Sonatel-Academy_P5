@@ -1,11 +1,12 @@
 import csv
 import json
 import fonctions
+# from sys import exit
 valideglo=[]
-valide = []
 invalideglo=[]
-invalide=[]
-csv_reader = csv.DictReader(open('/home/anna/Donnees_Projet_Python_DataC5.csv','r'))
+invalide =[]
+valide = []
+csv_reader = csv.DictReader(open('donnees_projet_python.csv','r'))
 #Convertir CSV en JSON
 def csv_to_json():
     jsonArray=[]
@@ -37,9 +38,13 @@ with open('project_data.xml','w+') as xml_file:
     xml_file.write("<Eleves>")
     xml_file.write("\n".join([csv_to_xml(line) for line in csv_reader]))
     xml_file.write("\n")
-#Lorsque l'utilisateur choisi de travailler avec JSON, le programme retourne les données valides sous format csv et invalide sous format xml
 
+#Lorsque l'utilisateur choisi de travailler avec JSON, le programme retourne les données valides sous format csv et invalides sous format xml
 def choix_json(data_lire):
+    valideglo=[]
+    invalideglo=[]
+    invalide =[]
+    valide = []
     for row in data_lire:
         numero=fonctions.numero(row['Numero'])
         nom=fonctions.nom(row['Nom'])
@@ -49,7 +54,8 @@ def choix_json(data_lire):
         if classe == False:
             continue
         cl = fonctions.classeValide(classe)
-        note=fonctions.note(row['Note'])
+        note=fonctions.note(row['Note']) 
+    
         if (numero==True and nom==True and prenom==True and date==True and cl==True and note !=False):
             valide.append(row['Numero'])
             valide.append(row['Nom'])
@@ -58,6 +64,7 @@ def choix_json(data_lire):
             valide.append(classe)
             valide.append(note)
             valideglo.append(valide)
+            valide =[]         
         else :
             invalide.append(row['Numero'])
             invalide.append(row['Nom'])
@@ -66,11 +73,10 @@ def choix_json(data_lire):
             invalide.append(classe)
             invalide.append(note)
             invalideglo.append(invalide)
-    
-    # data = open('project_data.json','r') 
-    # data_lire = json.load(data)
-    # valide,invalide = choix_json(data_lire)      
+            invalide=[]
+    return valideglo,invalideglo
     # Mettre les donnees valides dans le fichier csv
+def json_to_csv(valides_csv):
     header=['Numero','Nom','Prénom','Date de naissance','Classe','Note']
     with open('valides.csv','w') as csvf:
         # writer = csv.DictWriter(csvf,fieldnames=header)
@@ -79,17 +85,13 @@ def choix_json(data_lire):
         #  writer.writerows({"Numero":line[0],"Nom":line[1],"Prénom":line[2],"Date de naissance":line[3],"Classe":line[4],"Note":line[5]})
         csvstring=csv.writer(csvf, delimiter=",")
         csvstring.writerow(header)
-        csvstring.writerows(valide)
-    # valides_csv=csv.reader(csvf)
-    # vcsv=[row for row in valides_csv]
-    # for row in valides_csv:
-    #         print('**********************************************************************************************************************')
-    #         print(vcsv)
-    #         print('**********************************************************************************************************************')
+        csvstring.writerows(valides_csv)
+
+
     #Mettre les donnees invalide dans le fichier xml 
-    with open('project.json') as json_file:
-        d=json.load(json_file)
-        import xml.etree.cElementTree as e
-        root = e.Element("project")
-    for cle , valeur in d.items():
-        elt = e.SubElement(root, cle)
+    # with open('project.json') as json_file:
+    #     d=json.load(json_file)
+    #     import xml.etree.cElementTree as e
+    #     root = e.Element("project")
+    # for cle , valeur in d.items():
+    #     elt = e.SubElement(root, cle)

@@ -1,6 +1,6 @@
 import csv
 import fonctions
-with open('./Donnees_Projet_Python_DataC5.csv') as csvfile:
+with open('donnees_projet_python.csv') as csvfile:
     csvreader = csv.reader(csvfile)
     data = [i for i in csvreader]
     # print(data)
@@ -65,7 +65,12 @@ while choix in [1,2,3,4,5]:
         affichage((valideglo))
     elif c=='b':
         affichage((invalideglo))
-
+  elif choix == 2:
+    c=(input("Entrer le numéro de l'étudiant : "))
+    fonctions.affichage_d_une_information(c,valideglo)
+    fonctions.affichage_d_une_information(c,invalideglo)
+  elif choix == 4:
+    fonctions.ajout_nouvelle_information(valideglo)
     choix=int(input('           MENU\n' 
                 '1.Afficher les informations\n' 
                 '2.Afficher une information\n' 
@@ -74,10 +79,6 @@ while choix in [1,2,3,4,5]:
                 '5.Modifier une information\n' 
                 '6.Quitter\n '
                 'Veuillez faire votre choix\n'))
+  
     if choix==5:
         exit
-# for i in invalideglo:
-#  print('===============================================================================')   
-#  print(i)
-#  print('===============================================================================')   
-# print(len(invalideglo))
