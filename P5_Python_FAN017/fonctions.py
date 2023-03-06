@@ -1,12 +1,10 @@
 import datetime
 #Verification du numero
 def numero(a):
-    if len(a)==7:
-        if a.isalnum()==True:
-            if a.isupper()==True:
-                if any(cl.isdigit() for cl in a) == True:
-                        return True
-    return False
+    if len(a)==7 and a.isalnum() and a.isupper() and any(cl.isdigit() for cl in a)==True:
+     return True
+    else:
+     return False
 # Verification du nom
 def nom(a):
 
@@ -24,7 +22,7 @@ def prenom(a):
 #Verification de la date de naissance
 def validdate(date):
     try:
-        date=date.strip()
+        date=date.strip('#')
         date=date.replace(' ','/').replace('-','/').replace('_','/').replace(',','/').replace('|','/').replace(':','/').replace('.','/').replace('mars','03').replace('fev','02').replace('decembre','12')
         for i in date:
             cl=date.split('/')
@@ -33,7 +31,7 @@ def validdate(date):
 
         if cl[1].isdigit():
             mois=int(cl[1])
-        
+
         if cl[2].isdigit():
             an=int(cl[2])
         d=datetime.datetime(an,mois,dd).strftime('%d/%m/%y')
@@ -58,8 +56,7 @@ def classeValide(cl):
         return True
     else:
         return False
-n='Math[11;13:06] #Francais[08;17:12] #Anglais[13;13:12] #PC[09;18:07] #SVT[15;10:10] #HG[14;19:17]'
-# Verification de la note 
+# Verification de la note
 def note(a):
     # print(a)
     tab=[]
@@ -70,9 +67,12 @@ def note(a):
         s=0
         nbr=0
         moy=1
+        so=0
+        somme=0
+        moyg=0
         if matiere==""  or matiere==" " or len(matiere)<= 1:
             return False
-        # print("dddd",matiere)    
+        # print("dddd",matiere)
         for i in range (1,len(matiere)):
             for c in matiere[i]:
                 if c not in["0","1","2","3","4","5","6","7","8","9","."]:
@@ -87,19 +87,39 @@ def note(a):
         if (moy) > 0 and (moy) <=20:
             matiere.append(moy)
             tab.append(matiere)
-    return tab     
+    return tab
+
+def moyenne_generale(donne):
+    moyg=1
+    somme = 0
+    for line in donne:
+        #print(line[len(line)-1])
+        somme += float(line[len(line)-1])
+    moyg = round((somme/len(donne)),2)
+    return moyg
+# n='Math[11;13:06] #Francais[08;17:12] #Anglais[13;13:12] #PC[09;18:07] #SVT[15;10:10] #HG[14;19:17]'
+# m=note(n)
+# #print(m)
+# print(moyenne_generale(m))
+    # a.append(moyg)
+    # return a
+
+#def affichage_cinq_premiers(a):
+#     etu=sorted( a, key=lambda o:o[-1],reverse=True)
+#     for i in range(5):
+
 
 #Affichage d'une information selon le numero
 def affichage_d_une_information(a,tab):
     bool=False
     for i in tab:
         if a in i:
-            bool=True 
+            bool=True
             for j in range (len(i)):
                 print("|",i[j], end =(15-len(str(i[j])))*" ")
     if bool==False:
         print("L'étudiant n'est pas sur la liste")
-    
+
 #Ajout d'une nouvelle information selon les critères de validité
 def ajout_nouvelle_information(a):
     #Ajout du numero
@@ -124,14 +144,14 @@ def ajout_nouvelle_information(a):
         pren=str(input("Prenom : "))
         p=prenom(pren)
     #Ajout de la date de naissance
-    d=str(input("Date de naissance"))
+    d=str(input("Date de naissance : "))
     da=validdate(d)
     while da == False:
         print('Veuillez entrer une bonne date de naissance')
         d=str(input("Date de naissance : "))
         da=validdate(d)
     #Ajout de la classe
-    c=str(input("Entrer une classe"))
+    c=str(input("Entrer une classe : "))
     c1=definirFormatClasse(c)
     if c1 == False:
         pass
@@ -144,13 +164,15 @@ def ajout_nouvelle_information(a):
             pass
         c2 =classeValide(n1)
     #Ajout des notes
-    no=str(input("Entrer les notes"))
+    no=str(input("Entrer les notes: "))
     nt=note(no)
     while nt == False:
-        print("Veuiller entrer de bonnes notes")
-        no=str(input("Entrer les notes : "))
+        print("Veuillez entrer de bonnes notes")
+        no=str(input("Entrer les notes: "))
         nt=note(no)
-    a.append(nume,name,pren,d,c,no)
-
-
-
+    a.append(nume)
+    a.append(name)
+    a.append(pren)
+    a.append(d)
+    a.append(c)
+    a.append(no)

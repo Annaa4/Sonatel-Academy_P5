@@ -30,7 +30,7 @@ with open('donnees_projet_python.csv') as csvfile:
             invalide.append(list)
             list=[]
     for line in valide:
-     print(len(valide))
+        print(line[5])
 def affichage(a):
     print("-"*130)
     for i in a:
@@ -64,7 +64,8 @@ while choix in [1,2,3,4,5]:
     c=(input("Entrer le numéro de l'étudiant : "))
     fonctions.affichage_d_une_information(c,valide)
     fonctions.affichage_d_une_information(c,invalide)
-    #  fonctions.moyenne_generale(valide,fonctions.note(dt[6]))
+  elif choix == 3:
+        fonctions.moyenne_generale(fonctions.note(valide[6]))
   elif choix == 4:
     fonctions.ajout_nouvelle_information(list)
     choix=int(input('           MENU\n' 
