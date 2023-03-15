@@ -4,6 +4,7 @@ from fonctions_poo import Etudiant
 with open('donnees_projet_python.csv') as csvfile:
     csvreader = csv.reader(csvfile)
     data = [i for i in csvreader]
+class Affichage:
     valide=[]
     invalide=[]
     list=[]
@@ -32,14 +33,11 @@ with open('donnees_projet_python.csv') as csvfile:
         else:
             invalide.append(list)
             list=[]
-    print("fghjkl")
-    for line in valide:
-     print(len(valide))
 
-# def affichage(a):
-#     print("-"*130)
-#     for i in a:
-#         for j in range (len(i)):
-#             print("|",i[j], end =(15-len(str(i[j])))*" ")
-#         print('\n')
-#     print("-"*130)
+def affichage(a):
+    print("-"*130)
+    for i in a:
+        for j in range (len(i)):
+            print("|",i[j], end =(15-len(str(i[j])))*" ")
+        print('\n')
+    print("-"*130)

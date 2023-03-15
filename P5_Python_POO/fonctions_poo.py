@@ -65,7 +65,7 @@ class Etudiant:
             return True
         else:
             return False
-class Matiere:
+# class Matiere:
     def verification_note(self,note):
     # print(a)
         tab=[]

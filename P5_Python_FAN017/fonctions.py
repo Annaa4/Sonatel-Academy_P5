@@ -67,9 +67,6 @@ def note(a):
         s=0
         nbr=0
         moy=1
-        so=0
-        somme=0
-        moyg=0
         if matiere==""  or matiere==" " or len(matiere)<= 1:
             return False
         # print("dddd",matiere)
