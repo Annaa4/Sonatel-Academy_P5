@@ -1,0 +1,14 @@
+body{
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.co{
+	text-align: center;
+	padding-top: 80px;
+	color: white;
+}
+.re{
+	display: inline-block;
+	margin-left: 10px;
+}

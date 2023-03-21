@@ -1,0 +1,17 @@
+.c{
+	color: #088A85;
+	margin-left: 200px;
+}
+img{
+	float: right;
+	font-size: 100px;
+	margin-right: 50px;
+}
+
+a{
+	color:#088A85 ;
+	margin-left: 20px;
+}
+body{
+	background-image:url("back.jpg");
+}
