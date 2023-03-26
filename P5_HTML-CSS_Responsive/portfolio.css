@@ -1,0 +1,60 @@
+/* CSS FOR PORTFOLIO PAGE */
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #74C69D;
+}
+.first_header_portfolio{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+nav{
+    margin-top: 2%;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+}
+.first_main_portfolio{
+    text-align: center;
+}
+.first_main_portfolio h3{
+    color: #74C69D;
+}
+.logo_main_portfolio{
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+}
+.logo_main_portfolio img{
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+.learn_more{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 3px;
+    background-color: black;
+    margin-left: 45%;
+}
+footer{
+    background-color: #74C69D;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 3%;
+}
+.pied{
+    float: right;
+    color: white;
+    margin-right: 3%;
+}
