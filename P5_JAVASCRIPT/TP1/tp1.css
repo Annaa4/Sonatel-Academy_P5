@@ -1,0 +1,45 @@
+.general{
+    display: flex;
+    flex-direction: column;
+    background-color:skyblue;
+    margin:50px; 
+}
+
+#btn{
+    margin-top: 5%;
+    margin-right: 10%;
+    background-color: rgb(110, 212, 110);
+    float: left;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    color: white;
+    
+}
+.bx, .bxs-edit .bxs-trash{
+    color: white;
+}
+.bxs-edit {
+    float: right;
+}
+.bxs-trash{
+    float: right;
+}
+#container {
+    margin-top: 10%;   
+    display: flex;
+    flex-wrap: wrap;
+}
+.textarea{
+    width: 295px;
+    height: 319px;
+}
+.section{
+    background-color: rgb(110, 212, 110);
+    margin-right: 20px;
+    width: 300px;
+    height: 340px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+}

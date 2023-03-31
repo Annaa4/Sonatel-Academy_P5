@@ -1,0 +1,37 @@
+.general{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    margin:50px; 
+    height: 70%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+#left{
+    background-color: white;
+    margin: 20px;
+    width: 30%;
+}
+p{
+    text-align: center;
+}
+.bloc2{
+    background-color: grey;
+    display: flex;
+    margin-left: 6%;
+    flex-direction: column;
+    justify-content: center;
+}
+#right{
+    background-color: white;
+    margin: 20px;
+    width: 30%;
+}
+.hover{
+    background-color: blue;
+}
+.selected{
+    background-color: blue;
+}
