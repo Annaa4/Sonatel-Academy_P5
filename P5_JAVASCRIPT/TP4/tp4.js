@@ -1,55 +1,42 @@
-      const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
-      const numbers = '0123456789';
-      const specialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
+const lengthInput = document.getElementById("length");
+const uppercaseCheckbox = document.getElementById("uppercase");
+const lowercaseCheckbox = document.getElementById("lowercase");
+const numbersCheckbox = document.getElementById("numbers");
+const specialCheckbox = document.getElementById("special");
+const generateButton = document.getElementById("generate");
+const passwordInput = document.getElementById("password");
 
-      function generatePassword() {
-        let password = '';
-        const length = document.getElementById('length').value;
-        const uppercaseChecked = document.getElementById('uppercase').checked;
-        const lowercaseChecked = document.getElementById('lowercase').checked;
-        const numbersChecked = document.getElementById('numbers').checked;
-        const specialChecked = document.getElementById('special').checked;
-
-        const possibleChars = (uppercaseChecked ? uppercaseLetters : '') +
-                              (lowercaseChecked ? lowercaseLetters : '') +
-                              (numbersChecked ? numbers : '') +
-                              (specialChecked ? specialCharacters : '');
-
-        if (possibleChars === '') {
-          alert('Veuillez cocher au moins un critère pour générer un mot de passe.');
-          return;
+function verification_case_cochee(){
+    return uppercaseCheckbox.checked || lowercaseCheckbox.checked || numbersCheckbox.checked || specialCheckbox.checked;
+}
+function generer_password(){
+        let characters = "";
+        if (uppercaseCheckbox.checked) characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (lowercaseCheckbox.checked) characters += "abcdefghijklmnopqrstuvwxyz";
+        if (numbersCheckbox.checked) characters += "0123456789";
+        if (specialCheckbox.checked) characters += "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+        let password = "";
+        for (let i = 0; i < lengthInput.value; i++) {
+            password += characters.charAt(Math.floor(Math.random() * characters.length));
         }
+        return password;
+}
 
-        for (let i = 0; i < length; i++) {
-          password += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
-        }
+    // Fonction qui met à jour l'état du bouton Générer mot de passe
+    function updateGenerateButton() {
+        generateButton.disabled = !verification_case_cochee();
+    }
 
-        document.getElementById('password').value = password;
-      }
+    // Événements liés aux critères
+        uppercaseCheckbox.addEventListener("change", updateGenerateButton);
+        lowercaseCheckbox.addEventListener("change", updateGenerateButton);
+        numbersCheckbox.addEventListener("change", updateGenerateButton);
+        specialCheckbox.addEventListener("change", updateGenerateButton);
 
-      document.getElementById('generate').addEventListener('click', generatePassword);
+        // Événement lié au bouton Générer mot de passe
+        generateButton.addEventListener("click", function() {
+        passwordInput.value = generer_password();
+        });
 
-      document.getElementById('password').addEventListener('mouseover', function() {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.display = 'inline-block';
-        tooltip.style.top = (this.offsetTop - 25) + 'px';
-        tooltip.style.left = (this.offsetLeft + this.offsetWidth / 2 - tooltip.offsetWidth / 2) + 'px';
-
-        const range = document.createRange();
-        range.selectNodeContents(this);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-      });
-
-      document.getElementById('password').addEventListener('mouseout', function() {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.display = 'none';
-
-        const selection = window.getSelection();
-        selection
-      }
-
-
-
+        // Initialisation de l'état du bouton Générer mot de passe
+    // updateGenerateButton();

@@ -1,98 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Générateur de mot de passe</title>
-	<script src="script.js"></script>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		h1 {
-			text-align: center;
-		}
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		input[type="checkbox"] {
-			margin-right: 5px;
-		}
-		input[type="text"] {
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 10px;
-			border-radius: 5px;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-			font-size: 18px;
-			font-family: inherit;
-		}
-		button {
-			padding: 10px 20px;
-			background-color: #4CAF50;
-			color: white;
-			border: none;
-			border-radius: 5px;
-			font-size: 18px;
-			cursor: pointer;
-		}
-		button:disabled {
-			background-color: #ddd;
-			color: #555;
-			cursor: not-allowed;
-		}
-		.tooltip {
-			position: relative;
-			display: inline-block;
-		}
-		.tooltip .tooltiptext {
-			visibility: hidden;
-			width: 120px;
-			background-color: black;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 5px 0;
-			position: absolute;
-			z-index: 1;
-			bottom: 125%;
-			left: 50%;
-			margin-left: -60px;
-			opacity: 0;
-			transition: opacity 0.3s;
-		}
-		.tooltip .tooltiptext::after {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-width: 5px;
-			border-style: solid;
-			border-color: black transparent transparent transparent;
-		}
-		.tooltip:hover .tooltiptext {
-			visibility: visible;
-			opacity: 1;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Générateur mot de passe</title>
+	<link rel="stylesheet" href="tp4.css">
 </head>
 <body>
-	<h1>Générateur de mot de passe</h1>
-	<form>
-		<label>Longueur du mot de passe (15-20 caractères) : <input type="number" id="length" min="15" max="20" value="15"></label>
-		<label><input type="checkbox" id="uppercase">Lettres majuscules</label>
-		<label><input type="checkbox" id="lowercase">Lettres minuscules</label>
-		<label><input type="checkbox" id="numbers">Nombres</label>
-		<label><input type="checkbox" id="special">Caractères spéciaux</label>
-		<button type="button" id="generate" disabled>Générer Mot de passe</button>
-		<input type="text" id="password" readonly>
-	</form>
-	<p>Cliquez sur le champ de texte pour copier le mot de passe généré.</p>
-    <script src="tp4.js"></script>
+	<div class="general">
+		<div class="second">
+			<form>
+					<input type="text" id="password" readonly><br><br>
+				<div class="form0">
+					<label for="length"><h3>Longueur du mot de passe :</h3></label>
+					<input type="number" id="length" value="15" min="15" max="20">
+				</div>
+				<div class="form1">
+					<label for="uppercase"><h3>Contient des lettres majuscules</h3></label>
+					<input type="checkbox" id="uppercase" checked><br>
+			    </div>
+				<div class="form1">
+					<label for="lowercase"><h3>Contient des lettres minuscules</h3></label>
+					<input type="checkbox" id="lowercase" checked>
+				</div>
+				<div class="form2">
+					<label for="numbers"><h3>Contient des nombres</h3></label>
+					<input type="checkbox" id="numbers" checked>
+				</div>	
+				<div class="form3">
+					<label for="special"><h3>Contient des caractères spéciaux</h3></label>
+					<input type="checkbox" id="special" checked><br>
+				</div>
+				<button id="generate" disabled><h2>Générer le mot de passe</h2></button>
+				<br>
+			</form>
+		</div>
+	</div>
+<script src="tp4.js"></script>
 </body>
 </html>
-
