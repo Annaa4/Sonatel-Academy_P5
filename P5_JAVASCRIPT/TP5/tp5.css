@@ -1,0 +1,40 @@
+#quiz{
+    margin-top: 30px;
+    margin-left: 300px;
+    background-color: white;
+    width: 45%;
+    border-style: solid;
+    border-color: rgb(195, 192, 192);
+    border-radius: 5px;
+    border-width: 5px;
+    box-shadow: 5px 5px 5px 5px rgb(175, 171, 171);
+}
+#suivant{
+    background-color: rgb(121, 13, 222);
+    color: white;
+    font-size: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 47%;
+    padding-right: 44%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#replay{
+    background-color: rgb(121, 13, 222);
+    color: white;
+    font-size: 100%;
+    padding-top: 10px;
+    margin-left: 300px;
+    padding-bottom: 10px;
+    padding-left: 21%;
+    padding-right: 20.5%;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 5px rgb(175, 171, 171);
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+body{
+	background-image: url("./images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.co{
+	text-align: center;
+	padding-top: 80px;
+	color: white;
+	display: flex;
+	margin-left: 15%;
+}
+.cpt{
+	display: flex;
+	margin-left: 15%;
+}
+.small{
+	font-size: 100%;
+	margin-left: 15%;
+	color: white;
+	font-weight: bold;
+}
+h1{
+	text-align: center;
+	margin-top: 8%;
+	color: white;
+}
+h2{
+	margin-left: 15%;
+	font-size: 250%;
+}
