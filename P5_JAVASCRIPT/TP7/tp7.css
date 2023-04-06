@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(45, 49, 93);
+    margin: 0;
+}
+#movie_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie{
+    width: 15%;
+    margin-left: 20px;
+}
+.image{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.movie_info{
+    background-color: rgb(61, 66, 118);
+    color: white;
+    margin-top: -22px;
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+}
+.movie_rating{
+   margin-top: 45px; 
+   margin-right: 5px;
+}
+.movie_title{
+    margin-top: 35px;
+    margin-left: 5px;
+}
+.movie_description{
+    background-color: rgb(248, 241, 241);
+    color: rgb(14, 13, 13);
+    position: absolute;
+    width: 20%;
+}
+header{
+    margin-bottom: 15px;
+    background-color:   rgb(61, 66, 118);
+    padding-bottom: 35px;
+    padding-top: 20px;
+    position: relative;
+}
+input{
+    background-color: rgb(45, 49, 93);
+    border-radius: 12px;
+    border-color:  rgb(45, 49, 93);
+    color: white;
+    float: right;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
