@@ -1,6 +1,5 @@
 const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 const movie_container = document.getElementById("movie_container");
 const searchInput = document.getElementById("search"); 
 
@@ -118,3 +117,20 @@ searchInput.addEventListener("input",() =>{
     const rechercher = searchInput.value.toLowerCase();
     searchMovie(rechercher)
 })
+async function scrollMovie(apiUrl, pageCount) {
+    let movies = [];
+  
+    for (let i = 1; i <= pageCount; i++) {
+      const response = await fetch(apiUrl + '&page=' + i);
+      const data = await response.json();
+      movies = [...movies, ...data.results];
+    }
+  
+    return movies;
+  }
+
+  scrollMovie(APIURL, 10)
+    .then(movies => console.log(movies))
+    .catch(error => console.error(error));
+  
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projet_js.css">
+    <title>Projet JS</title>
+</head>
+<body>
+    <div id="container">
+        <div id="aside">
+            <input type="text" id="search">
+            <div id="button">
+                <div id="enseignant" class="btn">
+                    <i><img src="./images/class.png" alt=""></i><br>
+                    <p>Enseign. <button>+</button></p>
+                </div>
+                <div id="salle"class="btn">
+                    <i><img src="./images/stay-at-home.png" alt=""></i><br>
+                    <p>Salles <button>+</button></p>
+                </div>
+                <div id="classe"class="btn">
+                    <i><img src="./images/people.png" alt=""></i><br>
+                    <p>Classes <button>+</button></p>
+                </div>
+                <div id="module"class="btn">
+                    <i><img src="./images/poubelle-de-recyclage.png" alt=""></i><br>
+                    <p>Modules <button>+</button></p>
+                </div>
+            </div>
+            <select name="" id="select"></select>
+        </div>
+        <div id="section">
+            <div>
+                <label class="toogle">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <h1 id="titreplanning">Planning :</h1>
+            </div>
+                <div id="heure">
+                    <p>08H</p>
+                    <p>09H</p>
+                    <p>10H</p>
+                    <p>11H</p>
+                    <p>12H</p>
+                    <p>13H</p>
+                    <p>14H</p>
+                    <p>15H</p>
+                    <p>16H</p>
+                    <p>17H</p>
+                </div>
+                <div id="general">
+                    <div id="days">
+                        <p>Lundi<button id="lundi">+</button></p>
+                        <p>Mardi<button id="mardi">+</button></p>
+                        <p>Mercredi<button id="mercredi">+</button></p>
+                        <p>Jeudi<button id="jeudi">+</button></p>
+                        <p>Vendredi<button id="vendredi">+</button></p>
+                        <p>Samedi<button id="samedi">+</button></p>
+                    </div>
+                    <div id="second">
+                        <h5 id="el1"></h5>
+                        <h5 id="el2"></h5>
+                        <h5 id="el3"></h5>
+                        <h5 id="el4"></h5> 
+                        <h5 id="el5"></h5>
+                        <h5 id="el6"></h5>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <div id="formulaire">
+        <header>Modal Title</header>
+        <div id="contenu">
+            <div id="form0">
+                <label for="module">Module</label>
+                <label for="enseignant">Enseignant</label>
+                <label for="salle">Salle</label>
+                <label for="heureDebut">Heure de Début</label>
+                <label for="heureFin">Heure de Fin</label>
+            </div>
+           
+            <div id="form1">
+                <select name="" id="module-select">
+                    <option value="">Choisir un Module</option>
+                    <option value="algo">ALGO</option>
+                    <option value="php">PHP</option>
+                    <option value="python">PYTHON</option>
+                    <option value="lc">LC</option>
+                    <option value="javascript">JAVASCRIPT </option>
+                    <option value="java">JAVA</option>
+                </select>
+
+                <select name="" id="enseignant-select">
+                </select>
+
+                <select name="" id="salle-select">
+                    <option value="">Choisir une salle</option>
+                    <option value="s101">101</option>
+                    <option value="s102">102</option>
+                    <option value="s103">103</option>
+                    <option value="s104">104</option>
+                    <option value="s201">201</option>
+                    <option value="incub">incub</option>
+                </select>
+
+                <select name="" id="heureDebut-select">
+                    <option value="">Choisir une heure</option>
+                    <option value="H08">08H</option>
+                    <option value="H09">09H</option>
+                    <option value="H10">10H</option>
+                    <option value="H11">11H</option>
+                    <option value="H12">12H</option>
+                    <option value="H13">13H</option>
+                    <option value="H14">14H</option>
+                    <option value="H15">15H</option>
+                    <option value="H16">16H</option>
+                </select>
+
+                <select name="" id="heureFin-select">
+                    <option value="">Choisir une heure</option>
+                    <option value="H09">09H</option>
+                    <option value="H10">10H</option>
+                    <option value="H11">11H</option>
+                    <option value="H12">12H</option>
+                    <option value="H13">13H</option>
+                    <option value="H14">14H</option>
+                    <option value="H15">15H</option>
+                    <option value="H16">16H</option>
+                    <option value="H17">17H</option>
+                </select>
+            </div>
+        </div>
+        <footer>
+            <div id="but">
+             <button id="ajouter">Ajouter</button>
+             <button id="annuler">Annuler</button>
+            </div>
+        </footer>
+    </div>
+    <script src="projet_js.js"></script>
+</body>
+</html>
